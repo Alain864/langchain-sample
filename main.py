@@ -24,7 +24,7 @@ chain = prompt | llm | output_parser
 # Use the chain
 if __name__ == "__main__":
     # Example 1: Simple question
-    response = chain.invoke({"question": "What is the capital of France?"})
+    response = chain.invoke({"question": "What is the biggest city in the world?"})
     print(f"Response: {response}\n")
     
     # Example 2: Stream responses
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     
     # Example 3: Batch processing
     questions = [
-        {"question": "What is 2+2?"},
+        {"question": "What is 3**3?"},
         {"question": "Name a primary color"}
     ]
     responses = chain.batch(questions)
