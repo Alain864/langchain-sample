@@ -35,8 +35,8 @@ if __name__ == "__main__":
     
     # Example 3: Batch processing
     questions = [
-        {"question": "What is 4**7?"},
-        {"question": "is Sauron a maiar"}
+        {"question": "What is 3**3?"},
+        {"question": "Name a primary color"}
     ]
     responses = chain.batch(questions)
     print("\nBatch responses:")
