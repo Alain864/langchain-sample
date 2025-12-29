@@ -1,0 +1,191 @@
+(env-lang) alaincl@Alains-MacBook-Air langchain-sample % /Users/alaincl/.pyenv/versions/env-lang/bin/python /Users/alaincl/Documents/Projects/langchain-sample/main4.py
+
+======================================================================
+SUPER ADVANCED LANGCHAIN IMPLEMENTATION
+======================================================================
+
+======================================================================
+1. ADVANCED RAG WITH MULTI-QUERY AND RE-RANKING
+======================================================================
+
+Original Question: How do machines learn from data?
+
+Generated 4 query variations:
+  1. How do machines learn from data?
+  2. What are the different methods machines use to learn from data?
+  3. Explain the process of machine learning from data
+  4. How does data contribute to the learning process of machines?
+
+Retrieved 5 unique documents
+
+Top 3 documents after re-ranking:
+  1. Machine learning is a subset of AI that enables systems to l...
+  2. Deep learning uses neural networks with multiple layers to l...
+  3. Supervised learning requires labeled data for training model...
+
+Final Answer:
+Machines learn from data through a process called machine learning, which is a subset of artificial intelligence. In machine learning, algorithms are used to analyze and interpret data in order to make predictions or decisions without being explicitly programmed to do so. 
+
+One common method of machine learning is supervised learning, which requires labeled data for training models. Labeled data means that each data point is accompanied by a label or tag that indicates the correct answer or outcome. The algorithm is then trained on this labeled data, learning to make predictions or decisions based on the patterns it identifies in the data.
+
+Another method of machine learning is unsupervised learning, which does not require labeled data. Instead, the algorithm is given a set of data and must find patterns or relationships within the data on its own. This can be useful for tasks such as clustering or anomaly detection.
+
+Deep learning is a subset of machine learning that uses neural networks with multiple layers to learn complex patterns in data. These deep neural networks are able to automatically learn features from the data, making them well-suited for tasks such as image and speech recognition.
+
+Overall, machines learn from data by analyzing and interpreting patterns in the data using algorithms and models. By training these models on labeled data or allowing them to find patterns in unlabeled data, machines are able to make predictions, decisions, and recommendations based on the information they have learned.
+
+
+======================================================================
+2. SELF-CORRECTING CHAIN WITH VALIDATION
+======================================================================
+
+Problem: If a train travels 120 km in 2 hours, then stops for 30 minutes, then travels another 90 km in 1.5 hours, what is its average speed for the entire journey?
+
+--- Attempt 1 ---
+Solution:
+To find the average speed for the entire journey, we need to first calculate the total distance traveled and the total time taken.
+
+Step 1: Calculate the total distance traveled
+Total distance = 120 km + 90 km = 210 km
+
+Step 2: Calculate the total time taken
+Total time = 2 hours + 30 minutes + 1.5 hours
+Convert 30 minutes to hours: 30 minutes / 60 = 0.5 hours
+Total time = 2 hours + 0.5 hours + 1.5 hours = 4 hours
+
+Step 3: Calculate the average speed
+Average speed = Total distance / Total time
+Average speed = 210 km / 4 hours
+Average speed = 52.5 km/h
+
+Therefore, the average speed for the entire journey is 52.5 km/h.
+
+Validation: CORRECT
+
+✓ Solution validated successfully!
+
+
+======================================================================
+3. PARALLEL CHAIN EXECUTION WITH AGGREGATION
+======================================================================
+
+Topic: Implementing AI-powered chatbots in customer service
+
+Executing parallel analysis...
+
+Integrated Analysis:
+Implementing AI-powered chatbots in customer service requires a comprehensive approach that considers technical, business, and user perspectives. From a technical standpoint, integrating chatbots with existing systems and training them with relevant data is crucial for effective performance. Utilizing AI technologies such as NLP, machine learning, and deep learning can enhance the chatbot's capabilities and scalability. 
+
+From a business perspective, AI-powered chatbots can lead to cost savings, increased efficiency, and improved customer satisfaction, ultimately driving revenue growth and competitive advantage. By automating routine tasks and providing personalized recommendations, businesses can enhance the overall customer service experience and build customer loyalty.
+
+Considering the user perspective, AI-powered chatbots can provide a more efficient and personalized support experience. Designing chatbots to be user-friendly, intuitive, and accessible across multiple platforms ensures that all users can easily interact with the service and receive the assistance they need. This can lead to improved user satisfaction and overall perception of the business.
+
+In conclusion, implementing AI-powered chatbots in customer service requires a holistic approach that considers technical capabilities, business objectives, and user needs. By carefully balancing these perspectives, organizations can create chatbots that enhance the customer experience, drive operational efficiency, and ultimately contribute to business growth and success.
+
+
+======================================================================
+4. DYNAMIC FEW-SHOT LEARNING
+======================================================================
+
+Customer: I'm having trouble accessing my dashboard
+
+Similar examples retrieved:
+  1. I can't log into my account (Category: authentication)
+  2. This feature doesn't work as expected (Category: bug_report)
+
+Agent: I'm sorry to hear that you're having trouble accessing your dashboard. Let's work together to troubleshoot this issue. Can you provide more details about the specific problem you're experiencing?
+
+----------------------------------------------------------------------
+
+Customer: Your service is terrible and slow!
+
+Similar examples retrieved:
+  1. Your product is amazing! (Category: feedback)
+  2. This feature doesn't work as expected (Category: bug_report)
+
+Agent: I'm sorry to hear that you're not satisfied with our service. We strive to provide the best experience possible and will do our best to address any issues you may have. Thank you for bringing this to our attention.
+
+----------------------------------------------------------------------
+
+Customer: Do you have an API I can integrate with?
+
+Similar examples retrieved:
+  1. When will feature X be available? (Category: feature_request)
+  2. How do I cancel my subscription? (Category: billing)
+
+Agent: Yes, we do have an API available for integration purposes. You can find more information and documentation on our website or feel free to reach out to our support team for assistance.
+
+----------------------------------------------------------------------
+
+
+======================================================================
+5. CONVERSATIONAL AGENT WITH TOOLS AND PLANNING
+======================================================================
+
+
+======================================================================
+Scenario 1
+======================================================================
+
+User: What is 15% of 240?
+
+Agent (Step 1): To find 15% of 240, we can calculate it using the formula:
+
+(15/100) * 240
+
+Let's calculate this.
+
+Agent (Step 2): TOOL: calculate("(15/100) * 240")
+
+Tool Result: Result: 36.0
+
+Agent (Step 3): ANSWER: 15% of 240 is 36.
+
+Final Answer: 15% of 240 is 36.
+
+
+======================================================================
+Scenario 2
+======================================================================
+
+User: Calculate (50 + 30) * 2 and then add 100 to the result
+
+Agent (Step 1): To solve this calculation step by step:
+1. Calculate (50 + 30) * 2
+2. Add 100 to the result of step 1.
+
+Let's start with step 1:
+TOOL: calculate("(50 + 30) * 2")
+
+Agent (Step 2): To solve this calculation step by step:
+1. Calculate (50 + 30) * 2
+2. Add 100 to the result of step 1.
+
+Let's start with step 1:
+TOOL: calculate("(50 + 30) * 2")
+
+Agent (Step 3): Let's calculate the expression step by step:
+
+1. Calculate (50 + 30) * 2:
+   TOOL: calculate("(50 + 30) * 2")
+
+I will now calculate the result of this expression.
+
+Agent (Step 4): Let's calculate the expression step by step:
+
+1. Calculate (50 + 30) * 2:
+   TOOL: calculate("(50 + 30) * 2")
+
+Now, we will add 100 to the result of the above calculation.
+
+Agent (Step 5): Let's calculate the expression step by step:
+
+1. Calculate (50 + 30) * 2:
+   TOOL: calculate("(50 + 30) * 2") 
+
+Now, let's add 100 to the result.
+
+
+======================================================================
+ALL DEMONSTRATIONS COMPLETED!
+======================================================================

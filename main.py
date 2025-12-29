@@ -29,7 +29,7 @@ if __name__ == "__main__":
     
     # Example 2: Stream responses
     print("Streaming response:")
-    for chunk in chain.stream({"question": "Tell me a short joke"}):
+    for chunk in chain.stream({"question": "Tell me a short story"}):
         print(chunk, end="", flush=True)
     print("\n")
     
